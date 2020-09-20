@@ -16,7 +16,7 @@ module.exports = function (app) {
 
     console.log("***Note saved: ", req.body);
 
-    writeFileAsync("./test.json", JSON.stringify(noteData));
+    writeFileAsync("./db/db.json", JSON.stringify(noteData));
     console.log("***json created***");
   });
 
