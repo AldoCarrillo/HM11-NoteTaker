@@ -48,5 +48,38 @@
     <script src="/assets/js/index.js"></script>
   </body>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    $(".list-group").on("click", function (event) {
+      event.preventDefault();
+      var target = event.target;
+
+      $.ajax({ url: "/api/notes", method: "GET" }).then(function (notesData) {
+        notesData.forEach((element) => {
+          if (target.textContent == element.title) {
+            var noteTitle = element.title;
+            var noteText = element.text;
+
+            setNoteInfo(noteTitle, noteText);
+          }
+        });
+      });
+    });
+
+    function setNoteInfo(title, text) {
+      const titleField = $(".note-title");
+      const textField = $(".note-textarea");
+
+      titleField.val(title);
+      textField.val(text);
+    }
+
+    function runTableNotes() {
+      $.ajax({ url: "/api/notes", method: "GET" }).then(function (notesData) {
+        console.log("--------- DATA --------------");
+        console.log(notesData);
+      });
+    }
+
+    runTableNotes();
+  </script>
 </html>
