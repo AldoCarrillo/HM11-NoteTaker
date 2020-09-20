@@ -22,10 +22,10 @@ Run the terminal the main file called "server.js" with Node.
 
 ## Usage
 
-To create new note, just click in the pen icon to crate a new one
-to save a note, click in the save button after typed the title and the text
-to check a previous note, just click in the note from the note list.
-to delete a note, click in the red button next to the notes list
+- To create new note, just click in the pen icon to crate a new one
+- To save a note, click in the save button after typed the title and the text
+- To check a previous note, just click in the note from the note list.
+- To delete a note, click in the red button next to the notes list
 
 #### New Note
 
